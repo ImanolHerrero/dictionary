@@ -12,7 +12,6 @@ const DataInfo: React.FC<DataInfoProps> = ({ data }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        console.log('loading false')
         setIsLoading(false);
     }, []);
 
