@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { MoveUpRight } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
+
 interface DataInfoProps {
     data: any[];
 }
@@ -48,7 +49,7 @@ const DataInfo: React.FC<DataInfoProps> = ({ data }) => {
                             {data[0]?.sourceUrls && data[0]?.sourceUrls[0] && (
                                 <Link href={data[0].sourceUrls[0]} >
                                     <div className='flex flex-row items-center underline underline-offset-4 decoration-orange-600 mt-4'>
-                                        <p>Source</p>
+                                        <p className='hover:text-orange-600'>Source</p>
                                         <MoveUpRight className='w-2 h-2 mx-1' />
                                     </div>
                                 </Link>

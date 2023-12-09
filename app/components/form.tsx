@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import DataInfo from './DataInfo';
+import { useToast } from "@/components/ui/use-toast";
+import { ToastAction } from "@/components/ui/toast"
 
 function Form() {
+    const { toast } = useToast()
+
     const [searchTerm, setSearchTerm] = useState('book');
     const [data, setData] = useState<any[]>([]);
 
@@ -16,6 +20,12 @@ function Form() {
             });
             const fetchedData = await response.json();
             setData(fetchedData);
+            if (fetchedData.title === 'No Definitions Found') {
+                toast({
+                    title: "Uh oh! Something went wrong.",
+                    description: "Word not found. Please try again",
+                })
+            }
             console.log('fetched data:', fetchedData);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -46,7 +56,6 @@ function Form() {
                 </Button>
             </div>
             <p className='text-gray-500 italic text-sm mt-2'>Such as: tree, house, moon. Only English words.</p>
-
             <DataInfo data={data} />
         </div>
     );
