@@ -17,3 +17,10 @@ Upon the initial page load, an example is displayed to guide users on what to ex
  - NextJS.
  - TailwindCSS.
  - shadcn/ui.
+
+# 👀 How to reach me
+ 
+► [**Linkedin**](https://www.linkedin.com/in/imanol-herrero-932956247/)
+
+► [**Email**](imano.arias@gmail.com)
+
