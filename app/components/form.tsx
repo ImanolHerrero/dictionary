@@ -26,7 +26,6 @@ function Form() {
                     description: "Word not found. Please try again",
                 })
             }
-            console.log('fetched data:', fetchedData);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

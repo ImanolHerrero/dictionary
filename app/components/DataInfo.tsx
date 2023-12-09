@@ -34,11 +34,12 @@ const DataInfo: React.FC<DataInfoProps> = ({ data }) => {
                         <div>
                             <h1 className='font-bold text-2xl my-4 text-orange-600'>{data[0]?.word}<span className='font-light ml-2 text-base text-gray-500'>{data[0]?.phonetic}</span></h1>
 
-                            {data[0]?.phonetics[0]?.audio && (
+                            {data[0]?.phonetics.some((phonetic: { audio: string; }) => phonetic.audio) && (
                                 <audio controls key={new Date().getTime()} className='w-full my-2 mb-8'>
-                                    <source src={data[0]?.phonetics[0]?.audio} type="audio/mp3" />
+                                    <source src={data[0]?.phonetics.find((phonetic: { audio: string; }) => phonetic.audio)?.audio} type="audio/mp3" />
                                 </audio>
                             )}
+
 
                             {data[0]?.meanings[0]?.definitions.slice(0, 4).map((definition: any, index: number) => (
                                 <ul key={index} role="list" className="marker:text-orange-600 list-disc pl-5 my-4">
