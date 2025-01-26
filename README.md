@@ -1,8 +1,8 @@
 # 📙 Dictionary App
 
-The primary goal of this project was to strengthen my experience in using React and Next.js, managing API calls, styling with Tailwind CSS, and incorporating components from a framework like shadcn/ui.
+The primary goal of this project was to strengthen my experience using React and Next.js, managing API calls, styling with TailwindCSS, and incorporating components from a framework like shadcn/ui.
 
- ► **[Live demo]()**
+ ► **[Live demo](dictionary-apiproject.vercel.app/)**
 
 #  🌎 API
 
